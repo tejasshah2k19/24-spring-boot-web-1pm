@@ -1,0 +1,91 @@
+file -> new -> spring starter project -> 
+
+	2 dep / lib / jar 
+	
+		1) spring web
+		2) spring boot dev tools
+		3) tomcat embeded jaster**** [ you have to get from maven website]  
+	
+---------------------------------------------------------------
+
+jsp / thymeleaf / rest api 
+
+jsp -> spring -> 
+	where we put all the jsp files?
+	we will put in webapp/WEB-INF/views folder 
+	
+	so we need to create three folders 
+		1) in main folder create webapp 
+		2) in webapp create WEB-INF
+		3) in WEB-INF create views 
+		
+configuration :-
+		application.properties
+		
+	how to write values(configuration) in properties file ?
+		ans : key:value 
+		
+#jsp 
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+
+jsp will not serve by your serever by default 
+we need to add lib for jsp 
+	dep name is tomcat-embeded-jasper 
+
+-----------------------------------------------------------------
+
+how to set server port in spring application ?
+#server 
+server.port=9999
+
+-----------------------------------------------------------------
+
+
+spring tool suit -> sts -> jsp plugins remove -> 
+	Q: how we can install jsp plugins ? 
+	ans: help->eclipse market place -> click on popular tab-> 
+
+
+
+--------------------------------------------------------------------
+
+how to create controller? 
+
+1) create class-> 
+2) use @Controller annotation -> 
+
+
+where we create controller ? 
+	inside controller folder -> 
+	java/com/controller 		
+
+
+
+spring controller-> method 
+			public 
+			String :: jsp  
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
