@@ -68,6 +68,71 @@ spring controller-> method
 			String :: jsp  
 			
 
+-----------------------------------------------------
+
+input two numbers 
+
+addition 
+
+input process output 
+
+
+input : jsp 
+process : method 
+
+
+jsp open -> method -> @Getmapping 
+
+
+--------------------------------------------
+
+how to send data from controller to jsp? 
+
+to send data from controller to jsp we used request.setAttribute() in advance java 
+
+in spring we have to use Model interface -> from spring.ui 
+	we can create Model instance using argument of the method 
+
+----------------------------------------------
+validation -> 
+		required 
+		length
+		regEx 
+		
+		1) manually -> currency jsp-> 
+		2) lib:spring ->sessioncontroller 
+		
+		
+step1 :
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
+step2: use annotation for validation inside bean 
+		@NotBlank 
+		
+step3: @Validated used in controller to validate the bean 
+
+
+step4: use BindingResult in controller to check for errors 
+
+ 
+
+		 
+		
+	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
