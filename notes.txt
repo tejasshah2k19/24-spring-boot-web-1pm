@@ -116,7 +116,15 @@ step3: @Validated used in controller to validate the bean
 
 
 step4: use BindingResult in controller to check for errors 
+---------------------------------------------------------------------------
 
+10: new project -> 10min
+	controller -> input jsp -> process -> validation -> logic -> 20 min 
+	total 30 min : 
+	
+---------------------------------------------------------------------------
+	 
+	 
  
 
 		 
