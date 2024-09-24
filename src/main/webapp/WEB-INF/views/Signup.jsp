@@ -15,32 +15,39 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<h3 class="text-center mb-4">Signup Form</h3>
-				<form action="saveuser" method="post"> 
+				<form action="saveuser" method="post">
 					<div class="mb-3">
 						<label for="firstname" class="form-label">First Name</label> <input
 							type="text" class="form-control" id="firstname" name="firstName"
 							placeholder="Enter your first name">
+						${result.getFieldError("firstName").getDefaultMessage()}
 					</div>
 					<div class="mb-3">
 						<label for="lastname" class="form-label">Last Name</label> <input
 							type="text" class="form-control" id="lastname" name="lastName"
 							placeholder="Enter your last name">
+						${result.getFieldError("lastName").getDefaultMessage()}
+
 					</div>
 					<div class="mb-3">
 						<label for="email" class="form-label">Email</label> <input
 							type="text" class="form-control" id="email" name="email"
 							placeholder="Enter your email">
+						${result.getFieldError("email").getDefaultMessage()}
+
 					</div>
 					<div class="mb-3">
 						<label for="password" class="form-label">Password</label> <input
-							type="password" class="form-control" id="password" name=""
+							type="password" class="form-control" id="password" name="password"
 							placeholder="Enter your password">
+						${result.getFieldError("password").getDefaultMessage()}
+
 					</div>
 					<button type="submit" class="btn btn-primary w-100">Sign
 						Up</button>
 				</form>
-				
-			<a href="login">Login</a>
+
+				<a href="login">Login</a>
 			</div>
 		</div>
 	</div>

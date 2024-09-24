@@ -122,11 +122,22 @@ step4: use BindingResult in controller to check for errors
 	controller -> input jsp -> process -> validation -> logic -> 20 min 
 	total 30 min : 
 	
----------------------------------------------------------------------------
+--------------------------------------------------------------------------- 
 	 
-	 
- 
+PG :- 
 
+Mysql :- 
+	JAR 
+	1) spring jdbc 
+	2) mysql connector 
+	 
+	db configuration 
+		url
+		username
+		password 
+		
+	query -> JdbcTemplate -> run 
+	
 		 
 		
 	
