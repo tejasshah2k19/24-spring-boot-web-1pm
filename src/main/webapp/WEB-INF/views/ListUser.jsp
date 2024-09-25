@@ -31,7 +31,9 @@
 			<td><%=u.getUserId()%></td>
 			<td><%=u.getFirstName()%></td>
 			<td><%=u.getEmail()%></td>
-			<td><a href="deleteuser?userId=<%=u.getUserId()%>">Delete</a></td>
+			<td><a href="deleteuser?userId=<%=u.getUserId()%>">Delete</a> | 
+				<a href="viewuser?userId=<%=u.getUserId()%>">View</a>
+			</td>
 		</tr>
 
 		<%

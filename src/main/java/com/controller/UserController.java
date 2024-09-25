@@ -21,17 +21,23 @@ public class UserController {
 	public String getAllUsers(Model model) {
 
 		List<UserBean> users = userDao.getAllUsers();
-		model.addAttribute("users",users);
-		return "ListUser";//jsp
+		model.addAttribute("users", users);
+		return "ListUser";// jsp
 	}
-	
+
 	@GetMapping("/deleteuser")
 	public String deleteUser(@RequestParam("userId") Integer userId) {
-		
-		
-		//dao->delete user -> 
+		// dao->delete user ->
 		userDao.deleteByUserId(userId);
-		//
-		return "redirect:/users";//method - url 
+		return "redirect:/users";// method - url
 	}
+
+	@GetMapping("/viewuser")
+	public String viewUser(@RequestParam("userId") Integer userId,Model model) {
+		// dao->get user by id ->
+		UserBean user = userDao.getByUserId(userId);
+		model.addAttribute("user",user);
+		return "ViewUser";// method - url
+	}
+
 }

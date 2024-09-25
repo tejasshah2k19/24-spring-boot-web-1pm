@@ -22,15 +22,22 @@ public class UserDao {
 
 	}
 
-	//select -> n records -> query 
-	public  List<UserBean> getAllUsers() {
-		
-		List<UserBean> users = stmt.query("select * from users",new BeanPropertyRowMapper<>(UserBean.class));
-		return users; 
+	// select -> n records -> query
+	public List<UserBean> getAllUsers() {
+
+		List<UserBean> users = stmt.query("select * from users", new BeanPropertyRowMapper<>(UserBean.class));
+		return users;
 	}
 
 	public void deleteByUserId(Integer userId) {
-		stmt.update("delete from users where userId = ?",userId);
+		stmt.update("delete from users where userId = ?", userId);
+	}
+
+	public UserBean getByUserId(Integer userId) {
+		// select
+		UserBean user = stmt.queryForObject("select * from users where userId = ?",
+				new BeanPropertyRowMapper<>(UserBean.class), new Object[] { userId });
+		return user;
 	}
 
 }
