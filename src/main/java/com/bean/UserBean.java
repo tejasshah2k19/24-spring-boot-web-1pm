@@ -4,6 +4,8 @@ import jakarta.validation.constraints.NotBlank;
 
 public class UserBean {
 
+	private Integer userId;
+	
 	@NotBlank(message = "Please Enter FirstName")
 	private String firstName;
 
@@ -15,6 +17,14 @@ public class UserBean {
 	
 	@NotBlank(message = "Please Enter Password")
 	private String password;
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 
 	public String getFirstName() {
 		return firstName;

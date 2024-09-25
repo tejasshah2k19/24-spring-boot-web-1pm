@@ -139,9 +139,17 @@ Mysql :-
 	query -> JdbcTemplate -> run 
 	
 		 
-		
-	
+----------------------------------------------------------------------------
 
+db : query : spring : JdbcTemplate -> object 
+
+	1) update() : insert , update , delete 
+	2) query()  : select -> multiple records 0:N   
+	3) queryForObject() : select -> single record {user: userId->17}{email:password}  
+		
+----------------------------------------------------------------------------	
+
+	
 
 
 
