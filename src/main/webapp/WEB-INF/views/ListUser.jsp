@@ -32,7 +32,8 @@
 			<td><%=u.getFirstName()%></td>
 			<td><%=u.getEmail()%></td>
 			<td><a href="deleteuser?userId=<%=u.getUserId()%>">Delete</a> | 
-				<a href="viewuser?userId=<%=u.getUserId()%>">View</a>
+				<a href="viewuser?userId=<%=u.getUserId()%>">View</a> |
+				<a href="edituser?userId=<%=u.getUserId() %>">Edit</a>
 			</td>
 		</tr>
 
@@ -42,6 +43,7 @@
 
 
 	</table>
-
+	<br><br> 
+	<a href="search">Search</a>
 </body>
 </html>

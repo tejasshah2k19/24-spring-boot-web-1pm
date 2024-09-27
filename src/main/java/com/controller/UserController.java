@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bean.UserBean;
@@ -40,4 +41,22 @@ public class UserController {
 		return "ViewUser";// method - url
 	}
 
+	@GetMapping("/edituser")
+	public String editUser(@RequestParam("userId") Integer userId,Model model) {
+		// dao->get user by id ->
+		UserBean user = userDao.getByUserId(userId);
+		model.addAttribute("user",user);
+		return "EditUser";// method - url
+	}
+	
+	@PostMapping("/updateuser")
+	public String updateUser(UserBean user) {
+		userDao.updateUser(user);
+		return "redirect:/users";
+	}
+	
+	@GetMapping("/search")
+	public String search() {
+		return "Search";
+	}
 }
