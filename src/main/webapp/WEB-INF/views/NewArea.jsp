@@ -19,10 +19,10 @@
 	<div class="container mt-5">
 		<h2 class="text-center mb-4">Add New Area</h2>
 
-		<form>
+		<form action="savearea" method="post">
 			<div class="mb-3">
 				<label for="areaName" class="form-label">Area Name</label> <input
-					type="text" class="form-control" id="areaName"
+					type="text" class="form-control" name="areaName"
 					placeholder="Enter area name" required>
 			</div>
 
@@ -30,7 +30,7 @@
 
 			<div class="mb-3">
 				<label for="cityName" class="form-label">City Name</label> <select
-					class="form-select" name="cityName" required>
+					class="form-select" name="cityId" required>
 
 					<option value="" selected disabled>Select a city</option>
 					<c:forEach items="${cities}" var="c">
