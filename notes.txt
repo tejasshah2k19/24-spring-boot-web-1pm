@@ -148,13 +148,43 @@ db : query : spring : JdbcTemplate -> object
 	3) queryForObject() : select -> single record {user: userId->17}{email:password}  
 		
 ----------------------------------------------------------------------------	
+how to send mail using gmail in spring boot ? 
 
+	1) pom.xml jar-> dep -> java mail -> spring mail 
+	2) service ->
 	
 
+--------------------------------------------------------------------------
+jstl -> tags -> 
+		forEach -> for 
+		
+		jstl -> jstl.jar -> maven ==>
+		
+		
+		java17 => spring -->
+		
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		</dependency>
+		
 
-
-
+From db > Dao > controller > jsp --> 
+	city -> select * from city 
+	CityDao -> getAllCity()
+	AreaController -> newArea() ->
+	NewArea.jsp=> forEach => drop down 
+	 
+-------------------------------------------	
+	
+	
+	
+		
 
 
 

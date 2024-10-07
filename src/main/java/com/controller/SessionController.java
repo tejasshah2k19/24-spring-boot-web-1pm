@@ -1,5 +1,8 @@
 package com.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,12 +13,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bean.UserBean;
 import com.dao.UserDao;
+import com.service.MailService;
+
+import jakarta.mail.MessagingException;
 
 @Controller
 public class SessionController {
 
 	@Autowired
 	UserDao userDao;
+	
+	@Autowired
+	MailService mailService;
 	
 	@GetMapping("/newuser") // url ->it can be anything -
 	public String signup() { // method name can be anything
@@ -43,6 +52,19 @@ public class SessionController {
 			userDao.addUser(user);
 			System.out.println(user.getFirstName());
 			System.out.println(user.getEmail());
+			
+			//mail send 
+			//mailService.sendWelcomeEmail(user.getEmail(), user.getFirstName());
+			
+		    Map<String, Object> context = new HashMap<>();
+		    context.put("name", user.getFirstName());
+
+			try {
+				mailService.sendWelcomeEmailTemplate(user.getEmail(), user.getFirstName());
+			} catch (MessagingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return "Login";
 
 		}
