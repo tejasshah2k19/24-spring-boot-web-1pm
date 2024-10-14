@@ -15,7 +15,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<h3 class="text-center mb-4">Signup Form</h3>
-				<form action="saveuser" method="post">
+				<form action="saveuser" method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 						<label for="firstname" class="form-label">First Name</label> <input
 							type="text" class="form-control" id="firstname" name="firstName"
@@ -43,6 +43,14 @@
 						${result.getFieldError("password").getDefaultMessage()}
 
 					</div>
+					
+					<div class="mb-3">
+						<label for="profilePic" class="form-label">Profile Pic</label> <input
+							type="file" class="form-control"   name="profilePic"
+							placeholder="Select Profile pic">
+					</div>
+										
+					
 					<button type="submit" class="btn btn-primary w-100">Sign
 						Up</button>
 				</form>

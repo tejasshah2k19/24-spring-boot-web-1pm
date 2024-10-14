@@ -15,15 +15,15 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<h3 class="text-center mb-4">Login</h3>
-				<form action="saveuser" method="post"> 
+				<form action="authenticate" method="post"> 
 					<div class="mb-3">
 						<label for="email" class="form-label">Email</label> <input
-							type="text" class="form-control" id="email"
+							type="text" class="form-control" name="email"
 							placeholder="Enter your email">
 					</div>
 					<div class="mb-3">
 						<label for="password" class="form-label">Password</label> <input
-							type="password" class="form-control" id="password"
+							type="password" class="form-control" name="password"
 							placeholder="Enter your password">
 					</div>
 					<button type="submit" class="btn btn-primary w-100">Sign

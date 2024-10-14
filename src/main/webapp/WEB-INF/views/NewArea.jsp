@@ -25,7 +25,7 @@
 					type="text" class="form-control" name="areaName"
 					placeholder="Enter area name" required>
 			</div>
-
+o
 
 
 			<div class="mb-3">

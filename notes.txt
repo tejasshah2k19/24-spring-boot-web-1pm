@@ -182,10 +182,24 @@ From db > Dao > controller > jsp -->
 	 
 -------------------------------------------	
 	
-	
-	
-		
+file uploading -> image / audio / video / any type of file 
 
+		1) lib -> apache-commons-io
+				  apache-commons-fileupload 
+				   	
+	
+		2) form -> text / byte
+			    -> method="post" 
+			    -> encType="multipart/form-data" 		
+				-> input type="file"
+				
+				
+		3) inside bean create 1 variable with 
+				MultiPartFile profilePic; //variable name must match with form input 
+				
+		4) create 1 folder profilePic inside webapp - we will save image inside this folder 
+		
+		5) now we want to copy that multipart file into webapp/profilepic folder 		
 
 
 

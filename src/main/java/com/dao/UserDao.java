@@ -17,8 +17,8 @@ public class UserDao {
 
 	public void addUser(UserBean user) {
 		// update() -> insert update delete
-		stmt.update("insert into users(firstName,lastName,email,password) values (?,?,?,?)", user.getFirstName(),
-				user.getLastName(), user.getEmail(), user.getPassword());
+		stmt.update("insert into users(firstName,lastName,email,password,profilePicPath) values (?,?,?,?,?)", user.getFirstName(),
+				user.getLastName(), user.getEmail(), user.getPassword(),user.getProfilePicPath());
 
 	}
 
@@ -43,6 +43,13 @@ public class UserDao {
 	public void updateUser(UserBean user) {
 		stmt.update("update users set firstName = ? , lastName = ? where userId = ?", user.getFirstName(),
 				user.getLastName(), user.getUserId());
+	}
+
+	public UserBean getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		UserBean user = stmt.queryForObject("select * from users where email = ?",
+				new BeanPropertyRowMapper<>(UserBean.class), new Object[] { email });
+		return user;
 	}
 
 }
